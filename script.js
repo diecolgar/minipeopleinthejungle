@@ -26,6 +26,15 @@
     const text7 = document.querySelector(".text7")
     const enlightedword = document.querySelectorAll(".enlightedword")
 
+// PAGE 8
+    const absoluteimage1 = document.querySelector(".numberone img")
+    const absoluteimage2 = document.querySelector(".numbertwo img")
+    const absoluteimage3 = document.querySelector(".numberthree img")
+    const absoluteimage4 = document.querySelector(".numberfour img")
+    const absoluteimage5 = document.querySelector(".numberfive img")
+    const absoluteimage6 = document.querySelector(".numbersix img")
+    const absoluteimage7 = document.querySelector(".numberseven img")
+    const absoluteimage8 = document.querySelector(".numbereight img")
 
 
 // THINGS THAT HAPPEN WHEN CLICKING
@@ -58,7 +67,6 @@
 
             option.forEach(option => {
                 option.addEventListener('click', () => {
-                    console.log('pruebaaa')
                 document.querySelector(".one").style.transform = "translateY(-50vh)"
                 document.querySelector(".one").style.height = "0"
                 separator1.style.height = "100vh"
@@ -78,14 +86,11 @@
     
 
 
-
-
 // THINGS THAT HAPPEN WHEN SCROLLING
 window.addEventListener("scroll", () => {
 
     // parallax effect for second image
     const scrolled_distance = scrollY;
-    console.log(scrolled_distance)
 
     firstpoem.forEach(firstpoem => {
         firstpoem.style.transform = `translateY(-${scrolled_distance * 0.5}px)`
@@ -98,6 +103,25 @@ window.addEventListener("scroll", () => {
     // parallax effect for long text
     text7.style.transform = `translateY(${-scrolled_distance * 0.5 + screen.height * 1.8}px)`
 
+    // parallax effect for page 8 images
+    if((absoluteimage2.getBoundingClientRect().top) < screen.height) {
+        absoluteimage2.style.opacity = `${2 - ((absoluteimage2.getBoundingClientRect().top)/(screen.height/3))}`
+    }
+
+    if((absoluteimage4.getBoundingClientRect().top) < screen.height) {
+        absoluteimage4.style.opacity = `${1.5 - ((absoluteimage4.getBoundingClientRect().top)/(screen.height/3))}`
+    }
+
+    if((absoluteimage6.getBoundingClientRect().top) < screen.height) {
+        absoluteimage6.style.opacity = `${1.5 - ((absoluteimage6.getBoundingClientRect().top)/(screen.height/3))}`
+    }
+
+    if((absoluteimage8.getBoundingClientRect().top) < screen.height) {
+        absoluteimage8.style.opacity = `${1.5 - ((absoluteimage8.getBoundingClientRect().top)/(screen.height/3))}`
+    }
+
+
+
     // first sentence fadeout animation
     const title_hitbox_bottom = title.getBoundingClientRect().bottom
 
@@ -109,9 +133,6 @@ window.addEventListener("scroll", () => {
     // questions fade effect
     question.forEach((question, id) => {
 
-        console.log(question.getBoundingClientRect().top)
-        console.log("    ")
-
         if(question.getBoundingClientRect().top < (screen.height * 0.8)) {
             question.style.animation = "fadein 5s forwards"
         }
@@ -120,9 +141,6 @@ window.addEventListener("scroll", () => {
 
     // enlighted fade effect
     enlightedword.forEach((enlightedword, id) => {
-
-        console.log(enlightedword.getBoundingClientRect().top)
-        console.log("    ")
 
         if(enlightedword.getBoundingClientRect().top < (screen.height * 0.9)) {
             enlightedword.classList.add("enlightened")

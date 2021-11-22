@@ -322,34 +322,49 @@ body {
 .eight {
 	background-color: rgb(7, 7, 7);
 	position: relative;
+	max-height: 60vw;
 }
 
 .absoluteimage img {
 	position: absolute;
 }
 
-.numberone img {
-	top: -5%;
+.absoluteimage .grdnt {
+	position: absolute;
+	opacity: 1;
+    background:radial-gradient(circle, rgba(7, 7, 7, 0) 0%, rgba(131, 77, 77, 0) 30%, rgba(7, 7, 7, 1) 100%);
+}
+
+.numberone img, .numberfive img {
+	top: 5%;
 	left: 4%;
 	width: 45%;
 }
 
-.numbertwo img {
-	top: 5%;
+.numbertwo img, .numbersix img,  .numbertwo .grdnt, .numbersix .grdnt {
+	top: 15%;
 	left: 51%;
 	width: 35%;
+	height: 60%;
 }
 
-.numberthree img {
-	top: -19%;
+.numberthree img, .numberseven img {
+	top: -9%;
 	left: 51%;
 	width: 45%;
 }
 
-.numberfour img {
-	top: 5%;
+.numberfour img,  .numberfour .grdnt {
+	top: 15%;
 	left: 14%;
 	width: 35%;
+	height: 60%;
+}
+.numbereight img, .numbereight .grdnt {
+	top: 15%;
+	left: 14%;
+	width: 35%;
+	height: 40%;
 }
 
 /* --------------- PAGE 8 ---------------- */
