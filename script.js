@@ -78,9 +78,9 @@
                     }, 4000);    
                 })
             
-                // setTimeout(function(){
-                //     body.style.overflow = "visible"
-                // }, 15000);
+                setTimeout(function(){
+                    body.style.overflowY = "visible"
+                }, 15000);
                 }) 
             })
     
@@ -103,9 +103,9 @@ window.addEventListener("scroll", () => {
     // parallax effect for long text
     text7.style.transform = `translateY(${-scrolled_distance * 0.5 + screen.height * 1.8}px)`
 
-    // parallax effect for page 8 images
+    // fadein effect for page 8 images
     if((absoluteimage2.getBoundingClientRect().top) < screen.height) {
-        absoluteimage2.style.opacity = `${2 - ((absoluteimage2.getBoundingClientRect().top)/(screen.height/3))}`
+        absoluteimage2.style.opacity = `${1.5 - ((absoluteimage2.getBoundingClientRect().top)/(screen.height/3))}`
     }
 
     if((absoluteimage4.getBoundingClientRect().top) < screen.height) {

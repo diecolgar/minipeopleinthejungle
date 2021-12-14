@@ -592,7 +592,7 @@
 
     </div>
 
-    <div class="page eight">
+    <div class="page eight last">
 
       <div class="absoluteimage numberseven">
         <img src="images/gato.jpg" alt="">
@@ -605,8 +605,37 @@
 
     </div>
 
-    <div class="page nine"></div>
+    <div class="page nine">
+      <div class="ending">
+        <div class="minip ending-element">mini people in the jungle</div>
+        <div class="dawidp ending-element">a project by Dawid Planeta</div>
+        <div class="diegoc ending-element">developed by Diego Colino</div>
+      </div>
+    </div>
+
+
+    <!-- disable transitions when resizing -->
+      <script>
+        (function() { 
+            const classes = document.body.classList;
+            let timer = 0;
+            window.addEventListener('resize', function () {
+                if (timer) {
+                    clearTimeout(timer);
+                    timer = null;
+                }
+                else
+                    classes.add('stop-transitions');
+    
+                timer = setTimeout(() => {
+                    classes.remove('stop-transitions');
+                    timer = null;
+                }, 100);
+            });
+        })();
+    </script>
 
     <script src="script.js"></script>
+
   </body>
 </html>

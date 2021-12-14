@@ -22,6 +22,11 @@ body {
 	letter-spacing: 2px;
 	cursor: default;
 	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+body.stop-transitions * {
+	transition: none !important;
 }
 
 .page {
@@ -30,6 +35,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	height: 100vh;
+	width: 100vw;
 	position: relative;
 	color: var(--solargreen);
 	background-color: var(--lunargreen);
@@ -332,47 +338,90 @@ body {
 .absoluteimage .grdnt {
 	position: absolute;
 	opacity: 1;
-    background:radial-gradient(circle, rgba(7, 7, 7, 0) 0%, rgba(131, 77, 77, 0) 30%, rgba(7, 7, 7, 1) 100%);
+	background: radial-gradient(
+		circle,
+		rgba(7, 7, 7, 0) 0%,
+		rgba(7, 7, 7, 0.9) 60%,
+		rgba(7, 7, 7, 1) 100%
+	);
 }
 
-.numberone img, .numberfive img {
+.numberone img,
+.numberfive img {
 	top: 5%;
 	left: 4%;
 	width: 45%;
 }
 
-.numbertwo img, .numbersix img,  .numbertwo .grdnt, .numbersix .grdnt {
+.numbertwo img,
+.numbersix img,
+.numbertwo .grdnt,
+.numbersix .grdnt {
 	top: 15%;
 	left: 51%;
 	width: 35%;
 	height: 60%;
 }
 
-.numberthree img, .numberseven img {
+.numberthree img,
+.numberseven img {
 	top: -9%;
 	left: 51%;
 	width: 45%;
 }
 
-.numberfour img,  .numberfour .grdnt {
+.numberfour img,
+.numberfour .grdnt {
 	top: 15%;
 	left: 14%;
 	width: 35%;
 	height: 60%;
 }
-.numbereight img, .numbereight .grdnt {
+.numbereight img,
+.numbereight .grdnt {
 	top: 15%;
 	left: 14%;
 	width: 35%;
 	height: 40%;
 }
 
+.last {
+	height: 90vh;
+}
+
 /* --------------- PAGE 8 ---------------- */
 
 .nine {
 	height: 200vh;
-	background-image: url('images/serpiente.jpg');
+	background-image: linear-gradient(
+			to bottom,
+			rgba(7, 7, 7, 1) 0%,
+			rgba(7, 7, 7, 0.5) 20%,
+			rgba(7, 7, 7, 0) 100%
+		),
+		url('images/serpiente.jpg');
 	background-size: cover;
+	position: relative;
+}
+
+.ending {
+	position: absolute;
+	bottom: 24rem;
+	text-align: center;
+}
+
+.ending-element {
+	margin: 1rem;
+}
+
+.minip {
+	opacity: 1;
+}
+.dawidp {
+	opacity: 0.7;
+}
+.diegoc {
+	opacity: 0.4;
 }
 
 /* --------------- ANIMATIONS ---------------- */
