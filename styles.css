@@ -243,6 +243,14 @@ body.stop-transitions * {
 
 .two {
 	height: 40vh;
+	/* background-image: linear-gradient(
+			to bottom,
+			rgba(23, 24, 23, 0.95) 0%,
+			rgba(23, 24, 23, 0.75) 50%,
+			rgba(23, 24, 23, 0.95) 100%
+		),
+		url('images/serpiente.jpg'); */
+	background-position: bottom;
 }
 
 .dos {

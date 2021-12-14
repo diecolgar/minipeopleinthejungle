@@ -36,7 +36,6 @@
     const absoluteimage7 = document.querySelector(".numberseven img")
     const absoluteimage8 = document.querySelector(".numbereight img")
 
-
 // THINGS THAT HAPPEN WHEN CLICKING
 
     // first click (first page display)
