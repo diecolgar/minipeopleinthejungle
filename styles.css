@@ -413,8 +413,9 @@ body.stop-transitions * {
 }
 
 .ending {
+	font-size: 1rem;
 	position: absolute;
-	bottom: 24rem;
+	bottom: 18rem;
 	text-align: center;
 }
 

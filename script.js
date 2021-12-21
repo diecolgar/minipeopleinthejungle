@@ -43,23 +43,23 @@
 
             clicker.style.position = "absolute"
             clicker.style.cursor = "auto"
-            clicker.style.animation = "fadebox 1s forwards"
+            clicker.style.animation = "fadebox 2s forwards"
             setTimeout(function(){
                 clicker.style.display = "none"
-            }, 1000);
+            }, 2000);
 
             title.style.display = "flex"
-            title.style.animation = "delayedfadein 1s forwards"
+            title.style.animation = "delayedfadein 5s forwards"
 
             setTimeout(function(){
                 optionyes.style.display = "flex"
-                optionyes.style.animation = "fadein 1s forwards"
-            }, 1000);
+                optionyes.style.animation = "fadein 2s forwards"
+            }, 3000);
 
             setTimeout(function(){
                 optionno.style.display = "flex"
-                optionno.style.animation = "fadein 1s forwards"
-            }, 2000);
+                optionno.style.animation = "fadein 2s forwards"
+            }, 4000);
         })
 
     // second click (either yes or no)
